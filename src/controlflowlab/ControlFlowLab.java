@@ -1,7 +1,8 @@
 package controlflowlab;
 
 /**
- * The method should print diagonals to generate a rectangular pattern composed of stars (*). This should be accomplished by using loops (see examples below).
+ * The method should print diagonals to generate a rectangular pattern composed of stars (*). 
+ * This should be accomplished by using loops (see examples below).
 
 
 EXAMPLE INPUT/OUTPUT:
@@ -55,7 +56,8 @@ The patterns above consist of a number of rows and columns (where number is the 
 
 HINT: Use a nested loop (a loop inside of a loop).
 
-HINT: To print on the same line, use the print method instead of println, e.g. System.out.print(" "); prints a space and does not "move" to another line.
+HINT: To print on the same line, use the print method instead of println, e.g. 
+* System.out.print(" "); prints a space and does not "move" to another line.
 
 HINT: To "move" to another line, you can use an empty println call, e.g. System.out.println();
  */
@@ -70,7 +72,30 @@ public class ControlFlowLab {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        printSquareStar(-1);
+        System.out.println("++++++++++++++++++++++++++++++");
+        System.out.println();
+        printSquareStar(5);
+        System.out.println("++++++++++++++++++++++++++++++");
+        System.out.println();
+        printSquareStar(8);
     }
     
+    /** Method to print square star. */
+    public static void printSquareStar(int number) {
+        if (number < 5) {
+            System.out.println("Invalid Input");
+        }
+        for (int rows = 0; rows < number; rows++) {
+            for (int columns = 0; columns < number; columns++) {
+                if (rows == 0 || columns == 0 || rows == columns 
+                        || rows == number - 1 || columns == number - 1
+                        || rows + columns == number - 1)
+                    System.out.print("*");
+                else 
+                    System.out.print(" ");    
+            }
+            System.out.println();
+        }
+    }
 }

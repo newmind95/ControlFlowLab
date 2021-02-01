@@ -1,5 +1,7 @@
 package printsumandaverage;
 
+import java.util.Scanner;
+
 /**
  * Write a method called inputThenPrintSumAndAverage that does not have any parameters.
 
@@ -59,10 +61,25 @@ public class PrintSumAndAverage {
     
     /** Main method. */
     public static void main(String[] args) {
-        
+        inputThenPrintSumAndAverage();
     }
     
     public static void inputThenPrintSumAndAverage() {
-        
+        // Create a Scanner.
+        Scanner input = new Scanner(System.in);
+        System.out.println("INPUT: ");
+        int number = 0;
+        int sum = 0;
+        int counter = 0;
+        int average = 0;
+        while (input.hasNextInt()) {
+            number = input.nextInt();
+            sum += number;
+            counter++;
+        }
+        if (counter != 0) {
+           average = sum / counter;
+        }
+        System.out.println("SUM = " + sum + " " + "AVG = " + ((int)Math.round(average)));
     }
 }

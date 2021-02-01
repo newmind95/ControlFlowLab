@@ -31,4 +31,23 @@ Example input/output
  */
 public class FirstAndLastDigitSum {
     
+    /** Main method. */
+    public static void main(String[] args) {
+        System.out.println(sumFirstAndLastDigit(5));
+    }
+    
+    /** Method to find the first and the last digit. */
+    public static int sumFirstAndLastDigit(int number) {
+        int firstDigit = number;
+        int lastDigit = number % 10;
+        if (number < 1) {
+            return -1;
+        }
+        
+        while (firstDigit >= 10) {
+            firstDigit /= 10;
+        }
+        return firstDigit + lastDigit;
+    }
+    
 }

@@ -68,10 +68,10 @@ public class PrintSumAndAverage {
         // Create a Scanner.
         Scanner input = new Scanner(System.in);
         System.out.println("INPUT: ");
-        int number = 0;
-        int sum = 0;
-        int counter = 0;
-        int average = 0;
+        int number = 0;              // Initial is 0.
+        int sum = 0;                // Initial is 0.
+        int counter = 0;            // Initial is 0.
+        int average = 0;            // Initial is 0.
         while (input.hasNextInt()) {
             number = input.nextInt();
             sum += number;

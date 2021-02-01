@@ -115,59 +115,59 @@ public class NumberToWordsTask {
     
     /** Method that reverse the number. */
     public static int reverse(int num) {
-        int reverse = 0;
-        while (num != 0) {
-            int lastDigit = num % 10;
-            reverse = reverse * 10 + lastDigit;
-            num /= 10;
-        }
-        return reverse;
+       int reverse = 0;
+       while (num != 0) {
+           int lastDigit = num % 10;
+           reverse = reverse * 10 + lastDigit;
+           num /= 10;
+       }
+       return reverse;
     }
     
     /** Method to print words of the given number. */
     public static void numberToWords(int num) {
         if (num < 0) {
-            System.out.println("Invalid Value");
+            System.out.println("Invalid Input");
         }
         int digitCount = getDigitCount(num);
         num = reverse(num);
         for (int i = digitCount; i > 0; i--) {
-        switch (num % 10) {
-            case 0:
-                System.out.println("Zero");
-                break;
-            case 1:
-                System.out.println("One");
-                break;
-            case 2:
-                System.out.println("Two");
-                break;
-            case 3:
-                System.out.println("Three");
-                break;
-            case 4:
-                System.out.println("Four");
-                break;
-            case 5:
-                System.out.println("Five");
-                break;
-            case 6:
-                System.out.println("Six");
-                break;
-            case 7:
-                System.out.println("Seven");
-                break;
-            case 8:
-                System.out.println("Eight");
-                break;
-            case 9:
-                System.out.println("Nine");
-                break;
-            default:
-                System.out.println("None");
-        
+            switch (num % 10) {
+                case 0:
+                    System.out.println("Zero");
+                    break;
+                case 1:
+                    System.out.println("One");
+                    break;
+                case 2:
+                    System.out.println("Two");
+                    break;
+                case 3:
+                    System.out.println("Three");
+                    break;
+                case 4:
+                    System.out.println("Four");
+                    break;
+                case 5: 
+                    System.out.println("Five");
+                    break;
+                case 6:
+                    System.out.println("Six");
+                    break;
+                case 7:
+                    System.out.println("Seven");
+                    break;
+                case 8:
+                    System.out.println("Eight");
+                    break;
+                case 9:
+                    System.out.println("Nine");
+                    break;
+                default:
+                    System.out.println("None");
+                    break;
             }
-         num /= 10;
+            num /= 10;
         }
     }
     

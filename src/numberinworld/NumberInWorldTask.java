@@ -20,6 +20,7 @@ public class NumberInWorldTask {
         printNumberInWord(3);
         printNumberInWord(10);
         printNumberInWord(11);
+        printNumberInWord(-11);
     }
     
     /** Method to print number in word. */

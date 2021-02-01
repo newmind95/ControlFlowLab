@@ -66,7 +66,7 @@ HINT: To "move" to another line, you can use an empty println call, e.g. System.
  *
  * @author kristiyan
  */
-public class ControlFlowLab {
+public class DiagonalStarTask {
 
     /**
      * @param args the command line arguments
